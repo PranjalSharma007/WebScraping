@@ -299,8 +299,8 @@ def GUI():
     root.mainloop()
 
 
-if __name__ == "__main__":
-    # MySQL Connection
+ # Setup of MySQl connection
+if __name__ == "__main__":   
     mydb = sqltor.connect(
         host="localhost",
         user=mysqllogin()[0].strip(),
@@ -311,5 +311,4 @@ if __name__ == "__main__":
     header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36"}
     GUI()
     
-    # Close the database connection
     mydb.close()
